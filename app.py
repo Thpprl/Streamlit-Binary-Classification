@@ -15,6 +15,8 @@ def main():
     ################ Step 1 Create Web Title #####################
 
     st.title("Binary Classification streamlit App")
+    st.caption("Educational fork of mssrisupang/Streamlit-Binary-Classification · maintained in Thpprl’s repository")
+    st.info("แบบฝึกหัดจำแนกข้อมูล ไม่ใช้ตัดสินว่าเห็ดจริงรับประทานได้หรือไม่")
     st.sidebar.title("Binary Classification streamlit App")
     st.markdown("เห็ดนี้กินได้หรือไม่??? 🍄‍🟫🍄‍🟫🍄‍🟫")
     st.sidebar.markdown("เห็ดนี้กินได้หรือไม่??? 🍄‍🟫🍄‍🟫🍄‍🟫")
@@ -118,7 +120,7 @@ def main():
 
     if classifier == 'Random Forest':
         st.sidebar.subheader("Model Hyperparameters")
-        n_estimators = st.sidebar.number_input("Number of trees in the forest", 100, 5000, step=10, key='n_estimators')
+        n_estimators = st.sidebar.number_input("Number of trees in the forest", 100, 300, step=10, key='n_estimators')
         max_depth = st.sidebar.number_input("Maximum depth of the tree", 1, 20, step=1, key='max_depth')
 
         metrics = st.sidebar.multiselect("What metrics to plot?", ("Confusion Matrix", "ROC Curve", "Precision-Recall Curve"))
